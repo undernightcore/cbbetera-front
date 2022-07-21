@@ -1,0 +1,10 @@
+<div class="home">
+  <form class="home__form" [formGroup]="registroForm">
+    <mat-form-field hintLabel="Nombre" appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput #input maxlength="10" formControlName="nombre">
+      <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+    </mat-form-field>
+    <button (click)="submitForm()" mat-raised-button color="primary">Enviar</button>
+  </form>
+</div>
